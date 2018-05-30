@@ -78,7 +78,7 @@ RSpec.describe CustomersController do
       let!(:company_1) {create(:company_with_customers)}
       it 'sorts by first_name ascending' do
         sort_first_name = Customer.all.sort_by {|cust| cust.first_name.downcase}
-        get :index, {params: {sort_by: 'first_name_ascd'}}
+        get :index, {params: {sort_by: 'first_name_ascn'}}
         expect(assigns(:customers).to_a).to eq sort_first_name
       end
 
@@ -90,7 +90,7 @@ RSpec.describe CustomersController do
 
       it 'sorts by last_name ascending' do
         sort_last_name = Customer.all.sort_by {|cust| cust.last_name.downcase}
-        get :index, {params: {sort_by: 'last_name_ascd'}}
+        get :index, {params: {sort_by: 'last_name_ascn'}}
         expect(assigns(:customers).to_a).to eq sort_last_name
       end
 
@@ -102,7 +102,7 @@ RSpec.describe CustomersController do
 
       it 'sorts by company_name ascending' do
         sort_company_name = Customer.all.sort_by {|cust| cust.company.name.downcase}
-        get :index, {params: {sort_by: 'company_name_ascd'}}
+        get :index, {params: {sort_by: 'company_name_ascn'}}
         expect(assigns(:customers).to_a).to eq sort_company_name
       end
 
