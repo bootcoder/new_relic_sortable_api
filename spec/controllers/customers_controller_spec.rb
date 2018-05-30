@@ -10,6 +10,16 @@ RSpec.describe CustomersController do
       expect(assigns(:customers)).to eq [tina, tom]
     end
 
+    it 'limits results to first 50' do
+      aaron = create(:customer, first_name: 'Aaron', last_name: 'Aaronson')
+      50.times do
+        create(:customer)
+      end
+      get :index
+      expect(assigns(:customers).length).to eq 50
+      expect(assigns(:customers)).to include aaron
+    end
+
     context 'searchable by name' do
 
       it 'first_name' do

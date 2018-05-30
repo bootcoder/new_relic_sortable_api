@@ -1,3 +1,5 @@
+Right off I will say that I have commented in both code bases just for you.
+Grep for 'NOTE:' to find them. Other comments are my normal style.
 
 Choosing to go with Ruby/AR first for sorting as opposed to more complex SQL queries.
 
