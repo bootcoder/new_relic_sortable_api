@@ -21,7 +21,7 @@ RSpec.describe Customer, type: :model do
     let!(:cust_5) {create(:customer, first_name: 'Tracy', last_name: 'Tomay')}
     let!(:cust_6) {create(:customer, first_name: 'Jill', last_name: 'Smith')}
 
-    it "returns results matching input" do
+    it "returns names matching input" do
       expect(Customer.by_first_or_last_name('aa')).to eq [cust_1, cust_3]
       expect(Customer.by_first_or_last_name('Smith')).to eq [cust_2, cust_6]
       expect(Customer.by_first_or_last_name('r')).to eq [cust_1, cust_3, cust_4, cust_5]

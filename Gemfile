@@ -9,6 +9,8 @@ gem 'extra_print'
 gem 'rack-cors', require: 'rack/cors'
 gem 'active_model_serializers'
 
+gem 'simplecov', require: false, group: :test
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
