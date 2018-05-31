@@ -13,4 +13,8 @@
 !/log/.keep
 !/tmp/.keep
 
+coverage/assets/*
+coverage/*.json
+coverage/*.lock
+
 .byebug_history

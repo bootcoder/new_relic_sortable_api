@@ -24,6 +24,11 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_model_serializers (0.10.7)
+      actionpack (>= 4.1, < 6)
+      activemodel (>= 4.1, < 6)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (5.1.6)
       activesupport (= 5.1.6)
       globalid (>= 0.3.6)
@@ -39,13 +44,26 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (8.0.0)
+    awesome_print (1.8.0)
     builder (3.2.3)
     byebug (10.0.2)
+    case_transform (0.2)
+      activesupport
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     diff-lcs (1.3)
+    docile (1.1.5)
     erubi (1.7.1)
+    extra_print (2.0.0)
+      awesome_print (~> 1.8, >= 1.8.0)
+    factory_bot (4.8.2)
+      activesupport (>= 3.0.0)
+    factory_bot_rails (4.8.2)
+      factory_bot (~> 4.8.2)
+      railties (>= 3.0.0)
+    faker (1.8.7)
+      i18n (>= 0.7)
     ffi (1.9.23)
     formatador (0.2.5)
     globalid (0.4.1)
@@ -66,6 +84,8 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
+    json (2.1.0)
+    jsonapi-renderer (0.2.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -91,8 +111,12 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    pry-byebug (3.6.0)
+      byebug (~> 10.0)
+      pry (~> 0.10)
     puma (3.11.4)
     rack (2.0.5)
+    rack-cors (1.0.2)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.1.6)
@@ -107,6 +131,10 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.1.6)
       sprockets-rails (>= 2.0.0)
+    rails-controller-testing (1.0.2)
+      actionpack (~> 5.x, >= 5.0.1)
+      actionview (~> 5.x, >= 5.0.1)
+      activesupport (~> 5.x)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -145,6 +173,11 @@ GEM
     rspec-support (3.7.1)
     ruby_dep (1.5.0)
     shellany (0.0.1)
+    simplecov (0.13.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -169,13 +202,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   byebug
+  extra_print
+  factory_bot_rails (~> 4.0)
+  faker
   guard-rspec
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
+  pry-byebug
   puma (~> 3.7)
+  rack-cors
   rails (~> 5.1.5)
+  rails-controller-testing
   rspec-rails
+  simplecov
   spring
   spring-watcher-listen (~> 2.0.0)
 
