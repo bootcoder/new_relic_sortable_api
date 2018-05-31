@@ -6,6 +6,8 @@ gem 'puma', '~> 3.7'
 
 gem 'faker'
 gem 'extra_print'
+gem 'rack-cors', require: 'rack/cors'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -1,3 +1,5 @@
+For the frontend I decided on a overarching smart component (App) with several dumb children
+
 Right off I will say that I have commented in both code bases just for you.
 Grep for 'NOTE:' to find them. Other comments are my normal style.
 
